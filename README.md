@@ -1,4 +1,4 @@
-# UCYN-A Metatranscriptomes at Stn. ALOHA and the Scripps Pier
+# UCYN-A Metatranscriptomes at Stn. ALOHA and Scripps Pier
 
 Key scripts and data files for
 **Open ocean and coastal strains of the N2-fixing cyanobacterium UCYN-A havedistinct transcriptomes**
