@@ -1,0 +1,18 @@
+## Data can be obtained from the NCBI Gene Expression Omnibus accession GSE206403.
+SampleID	FileName
+65308_L3	Data/Arrays/65308.txt.gz
+65309_L6	Data/Arrays/65309.txt.gz
+65312_L6	Data/Arrays/65312.txt.gz
+65314_L9	Data/Arrays/65314.txt.gz
+65316_L9	Data/Arrays/65316.txt.gz
+65317_L12	Data/Arrays/65317.txt.gz
+65318_L12	Data/Arrays/65318.txt.gz
+65321_D3	Data/Arrays/65321.txt.gz
+65325_D6	Data/Arrays/65325.txt.gz
+65329_D9	Data/Arrays/65329.txt.gz
+65330_D9	Data/Arrays/65330.txt.gz
+65334_D12	Data/Arrays/65334.txt.gz
+65335_D12	Data/Arrays/65335.txt.gz
+65337_2L3	Data/Arrays/65337.txt.gz
+65341_2L6	Data/Arrays/65341.txt.gz
+65343_2L6	Data/Arrays/65343.txt.gz
