@@ -1,0 +1,18 @@
+## Data can be obtained from the NCBI Gene Expression Omnibus accession GSE206403.
+SampleID	SamplingTime	DayPart	LabelName	Experiment
+65308_L3	9	morning	L3	ALOHA_Mari
+65309_L6	12	noon	L6	ALOHA_Mari
+65312_L6	12	noon	L6	ALOHA_Mari
+65314_L9	3	afternoon	L9	ALOHA_Mari
+65316_L9	3	afternoon	L9	ALOHA_Mari
+65317_L12	6	sunset	L12	ALOHA_Mari
+65318_L12	6	sunset	L12	ALOHA_Mari
+65321_D3	9	night	D3	ALOHA_Mari
+65325_D6	12	midnight	D6	ALOHA_Mari
+65329_D9	3	night	D9	ALOHA_Mari
+65330_D9	3	night	D9	ALOHA_Mari
+65334_D12	6	sunrise	D12	ALOHA_Mari
+65335_D12	6	sunrise	D12	ALOHA_Mari
+65337_2L3	9	morning	2L3	ALOHA_Mari
+65341_2L6	12	noon	2L6	ALOHA_Mari
+65343_2L6	12	noon	2L6	ALOHA_Mari
