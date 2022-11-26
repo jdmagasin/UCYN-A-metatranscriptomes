@@ -24,7 +24,7 @@ stopifnot(snrCut > 0 && bottomPct > 0)
 cat("Will run the pipeline with stage 5 gene detection using snrCut=",snrCut," and bottomPct=",bottomPct,"\n\n")
 
 suppressMessages(library(MicroTOOLs))
-cfgFile <- 'config.tsv'
+cfgFile <- 'Metadata/config_for_pipeline.tsv'
 approachesToCarryForward <- 'ALOHA_Mari.quantilesNorm.medianpolishGene'
 ooi <- c('UCYN-A1','UCYN-A2','UCYN-A3')  # Organisms of interest
 
