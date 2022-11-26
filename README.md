@@ -11,4 +11,12 @@ Our study compared metatranscriptomes from natural populations of UCYN-A that we
 
 The Scripps Pier metatranscriptomes were previously reported by [Muñoz-Marín et al. (2019 in mBio)](https://journals.asm.org/doi/10.1128/mBio.02495-18).  The Stn. ALOHA data are new.  Both studies used custom UCYN-A microarrays that targeted major UCYN-A ecotypes UCYN-A1 (open ocean) and UCYN-A2 (coastal).  The Stn. ALOHA data used an updated microarray design that included known genes for UCYN-A3 (open ocean).
 
-fixme: Add link to slides from SCOPE 2022 poster
+
+### Repository contents:
+* scripts/
+    - runMicroTOOLsPipeine.R:  Runs the [MicroTOOLs microarray pipeline](https://www.jzehrlab.com/microtools) on the Stn. ALOHA arrays.  This is provided to illustrate the major steps for processing the arrays from quality control through robust multi-array averaging and the identification of genes with significant 24 h periodic expression.  Main outputs from running the pipeline are provided in Data/workspace.Rdata.
+    - statistical_tests.R:  Interactive script that does statistical tests that appear in our publication.  Relies on Data/workspace.Rdata.
+    
+* Metadata/:  Includes the main configuration file that was used to run runMicroTOOLsPipeline.R and two other files that describe the Stn. ALOHA data. Note that the Stn. ALOHA data reside at the [NCBI Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) under accession GSE206403.
+
+* Data/workspace.Rdata:  R image that has the Stn. ALOHA and Scripps Pier ExpressionSets and other key objects used during the analysis.
