@@ -5,7 +5,7 @@
 ##       María del Carmen Muñoz-Marín, Jonathan D. Magasin, and Jonathan P. Zehr
 ##
 
-## Manifest:
+## Manifest for required Data/workspace.Rdata (loaded below):
 ##   Objects
 ##     aloha         - Has three slots:
 ##                      eset     -- ExpressionSet of Stn. ALOHA log2 transcript
@@ -31,8 +31,8 @@
 ##                              were seen.
 ##
 
-library(Biobase)
-load('Munoz-Marin_Magasin_Zehr_PLOS_ONE.Rdata')
+library(Biobase) 
+load('Data/workspace.Rdata')
 
 set.seed(19200921)
 
