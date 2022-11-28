@@ -3,7 +3,7 @@
 Key scripts and data files for
 **Open ocean and coastal strains of the N<sub>2</sub>-fixing cyanobacterium UCYN-A have distinct transcriptomes**
 by María del Carmen Muñoz-Marín, Jonathan D. Magasin, and Jonathan P. Zehr
-published in _PLOS ONE_ (fixme: date, add URL)
+under review in _PLOS ONE_ (fixme: date, add URL)
 
 Biologically usable forms of nitrogen are scarce over much of the world ocean. Thus, marine microbes that can fix atmospheric N<sub>2</sub> gas into usable ammonia (NH<sub>3</sub>) are critical to marine food webs. One such microbe, the N<sub>2</sub>-fixing, the endosymbiotic cyanobacterium _Atelocyanobacterium thalassa_ ("UCYN-A"), can contribute substantial amounts of fixed nitrogen to marine microbial communities.  UCYN-A genomes are highly strealined and lack the full complement of genes required for obtaining carbon through photosynthesis.  Instead UCYN-A obtains carbon from its haptophyte (photosynthetic) host in exchange for fixed nitrogen.
 
