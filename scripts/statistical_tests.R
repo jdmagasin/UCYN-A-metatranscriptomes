@@ -81,11 +81,10 @@ df <- subset(df, UCYNA1>0 & UCYNA2>0)  # As above, only examine exrpessed genes.
 nrow(df) # 272 if just the >0.8um fraction
 a2 <- log2(df$UCYNA2)
 a1 <- log2(df$UCYNA1)
-qqnorm(a2); qqline(a2)  # For t-test, check normality. Seems so for most a2 and a1
-qqnorm(a1); qqline(a1)  # observations.
+qqnorm(a2-a1); qqline(a2-a1)                           # Differences seem normally distributed.
 t.test(a2, a1, paired=T, alternative='greater')        # PAIRED, ONE-SIDED
-wilcox.test(a2, a1, paired=T, alternative='greater')   # Alternative if disagree that a2 and a1 are
-                                                       # approximately normal.
+wilcox.test(a2, a1, paired=T, alternative='greater')   # If any doubt about t-test assumptions,
+                                                       # show result another way.
 ## Either way, p ~ 0 and the alternative hypothesis seems more likely.
 ## Gene-for-gene, UCYN-A2 transcript levels are higher than UCYN-A1 levels.
 rm(agg,df,x,a1,a2)
