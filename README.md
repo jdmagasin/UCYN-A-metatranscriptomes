@@ -15,6 +15,7 @@ The Scripps Pier metatranscriptomes were previously reported by [Muñoz-Marín e
 ### Repository contents:
 * scripts/
     - runMicroTOOLsPipeine.R:  Runs the [MicroTOOLs microarray pipeline](https://www.jzehrlab.com/microtools) on the Stn. ALOHA arrays.  This is provided to illustrate the major steps for processing the arrays from quality control through robust multi-array averaging and the identification of genes with significant 24 h periodic expression.  Main outputs from running the pipeline are provided in Data/workspace.Rdata.
+    - findCyclicGenes.R:  This is run by the previous script to identify genes with significant 24 h periorid expression ("diel genes").
     - statistical_tests.R:  Interactive script that does statistical tests that appear in our publication.  Relies on Data/workspace.Rdata.
     
 * Metadata/:  Includes the main configuration file that was used to run runMicroTOOLsPipeline.R and two other files that describe the Stn. ALOHA data. Note that the Stn. ALOHA data reside at the [NCBI Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) under accession GSE206403.
