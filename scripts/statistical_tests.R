@@ -57,7 +57,7 @@ stopifnot(length(crossSiteDetectedGids) == 760)
 
 ##
 ## Paired t-test of 272 genes detected for both UCYN-A2 and A1. Compares
-## orthologs based on gene symbols Restrict to the >0.8um fraction to pair genes
+## orthologs based on gene symbols. Restrict to the >0.8um fraction to pair genes
 ## from the same sample.  (There was no A2 in the 0.2-3um sample and no A1 in
 ## the 5-20um sample).
 ##
