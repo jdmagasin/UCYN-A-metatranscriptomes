@@ -1,0 +1,363 @@
+
+Welcome at Fri Nov 13 18:29:58 2020 
+Will run the pipeline with stage 5 gene detection using snrCut= 5  and bottomPct= 10 
+
+Warning message:
+package ‘MASS’ was built under R version 3.6.2 
+#### Starting PipelineStage0.Initialize(): Fri Nov 13 18:30:05 2020 ####
+Reading in the config file
+Will load 16 raw array files.
+Reading in Data/Arrays/65308.txt.gz
+Reading in Data/Arrays/65309.txt.gz
+Reading in Data/Arrays/65312.txt.gz
+Reading in Data/Arrays/65314.txt.gz
+Reading in Data/Arrays/65316.txt.gz
+Reading in Data/Arrays/65317.txt.gz
+Reading in Data/Arrays/65318.txt.gz
+Reading in Data/Arrays/65321.txt.gz
+Reading in Data/Arrays/65325.txt.gz
+Reading in Data/Arrays/65329.txt.gz
+Reading in Data/Arrays/65330.txt.gz
+Reading in Data/Arrays/65334.txt.gz
+Reading in Data/Arrays/65335.txt.gz
+Reading in Data/Arrays/65337.txt.gz
+Reading in Data/Arrays/65341.txt.gz
+Reading in Data/Arrays/65343.txt.gz
+Done reading in array data for: Data/Arrays/65308.txt.gz Data/Arrays/65309.txt.gz Data/Arrays/65312.txt.gz Data/Arrays/65314.txt.gz Data/Arrays/65316.txt.gz Data/Arrays/65317.txt.gz Data/Arrays/65318.txt.gz Data/Arrays/65321.txt.gz Data/Arrays/65325.txt.gz Data/Arrays/65329.txt.gz Data/Arrays/65330.txt.gz Data/Arrays/65334.txt.gz Data/Arrays/65335.txt.gz Data/Arrays/65337.txt.gz Data/Arrays/65341.txt.gz Data/Arrays/65343.txt.gz
+Arrays have 62976 probes (with 13903 unique names). There are 16 hybridization results.
+Creating an ExpressionSet, eSet.probes
+Saved R object eSet.probes in Output/Probe_Results/eSet.probes
+Creating an ExpressionSet, eSet.errors
+Saved R object eSet.errors in Output/Probe_Results/eSet.errors
+#### Initialization finished: Fri Nov 13 18:30:32 2020 ####
+#### Starting PipelineStage1.ProbeQuality(): Fri Nov 13 18:30:32 2020 ####
+Reading in the config file and loading ExpressionSets
+Done.
+Plotting probe intensity and error distributions (random 10K subset).
+See Output/Probe_Plots for probe_intensity.png and probe_error.png
+Running array quality metrics...
+The directory 'Output/Probe_Plots/ArrayQualityMetrics_eSet_probes' has been created.
+Done.  See report in Output/Probe_Plots/ArrayQualityMetrics_eSet_probes
+Boxplotting intensities of probes by types...
+Done.  See results in Output/Probe_Plots/ProbesByType
+Nonmetric multidimensional scaling...
+initial  value 3.090829 
+iter   5 value 2.125783
+iter   5 value 2.124030
+iter   5 value 2.122381
+final  value 2.122381 
+converged
+Done.  See Output/Probe_Plots
+#### Probe quality checks finished: Fri Nov 13 18:31:26 2020 ####
+There were 16 warnings (use warnings() to see them)
+#### Starting PipelineStage2.NormalizeArrays(): Fri Nov 13 18:31:26 2020 ####
+Reading in the config file and loading ExpressionSets
+Done.
+Performing background correction, method norm-exp.
+Array 1 corrected
+Array 2 corrected
+Array 3 corrected
+Array 4 corrected
+Array 5 corrected
+Array 6 corrected
+Array 7 corrected
+Array 8 corrected
+Array 9 corrected
+Array 10 corrected
+Array 11 corrected
+Array 12 corrected
+Array 13 corrected
+Array 14 corrected
+Array 15 corrected
+Array 16 corrected
+Removing probes that are not experimental (see setting 
+experimentalProbeSubType).  If you have ERCC probes that 
+use this sub type value, they will be retained.
+Doing "quantiles" normalizaion for ALOHA_Mari (16 samples)
+Reading in MicroTOOLs array design table Platform/platformA1A2A3.tsv.gz
+The MicroTOOLs array design (Platform/platformA1A2A3.tsv.gz) has 2753 rownames (gene IDs).  For comparison the probe ExpressionSet used for normalization has 2893 "systematic names", and the overlap between the two is 2753
+There are 0 probes in the array design that are not in the eset, and 140 in the eset but not in the array design. The eset-only probes have the following SubTypeMask  and (counts):
+0 (127); 1028 (10); 66 (2); 260 (1); 
+Creating Output/Probe_Plots/ALOHA_Mari_quantiles_boxplot.png
+Creating Output/Probe_Plots/ALOHA_Mari_quantiles_histogram.png
+Saving eSetList.probes.quantilesNorm, a normalized ExpressionSet list, to Output/Probe_Results/eSetList.probes.quantilesNorm
+Done.
+#### Probe normalization finished: Fri Nov 13 18:31:42 2020 ####
+#### Starting PipelineStage3.ConvertProbesToGenes(): Fri Nov 13 18:31:42 2020 ####
+Reading in the config file and loading ExpressionSets
+Loading post-normalization probe expression sets:
+  - Output/Probe_Results/eSetList.probes.quantilesNorm
+Done.
+Combinations of experiments x normalization x probe-to-gene conversion are as follows:
+  - ALOHA_Mari.quantilesNorm.medianpolishGene
+
+Calculating gene intensities from normalized probe intensities...
+Working on ALOHA_Mari.quantilesNorm.medianpolishGene
+Making gene-to-probe map. This takes ~10 minutes...
+Saving gene-to-probe map in cache file Output/cachedProbeToGeneMap.RData
+Calculating intensities for 2880 genes with medianpolish
+Creating Output/Gene_Plots/ALOHA_Mari.quantilesNorm.medianpolishGene.png
+Making gene ExpressionsSet for ALOHA_Mari.quantilesNorm.medianpolishGene
+Reading in MicroTOOLs array design table Platform/platformA1A2A3.tsv.gz and also the file that describes each of the columns, Platform/platformA1A2A3.labels.tsv.gz
+127 genes are in the gene intensity matrix but lack metadata:
+DQ516791,DQ883654,EF011068,DQ459429,DQ516784,DQ883671,DQ883643,DQ883659,DQ516752,DQ516776,DQ854998,DQ516783,DQ883661,EF011065,DQ883642,DQ855001,DQ516739,DQ516796,DQ516790,DQ459412,DQ875385,DQ459413,DQ883663,DQ516750,DQ883656,DQ459424,DQ883650,DQ516763,ERCC-00053_71,DQ668367,DQ516759,DQ516779,EF011062,ERCC-00062_278,DQ668365,ETG10_13482,DQ459430,ERCC-00012_90,DQ668366,EF011063,DQ459421,DQ459418,ERCC-00077_121,DQ459425,DQ516773,DQ459420,DQ516780,DQ459428,ERCC-00075_180,DQ883682,DQ854991,DQ839618,DQ516782,ETG08_142674,DQ883646,DQ668364,DQ855000,ERCC-00104_60,DQ875387,DQ459427,EF011069,DQ883673,DQ668359,ERCC-00171_229,ETG05_66023,DQ516731,DQ459415,DQ883685,DQ516740,DQ883652,DQ668358,ERCC-00097_63,DQ855003,DQ883653,DQ854997,ERCC-00028_121,ETG09_35454,DQ459422,DQ668363,DQ459431,ETG04_27747,DQ668356,ERCC-00043_129,DQ883664,DQ459426,DQ516795,DQ668362,DQ516748,ETG09_205211,ERCC-00160_243,ETG10_195139,DQ854992,DQ516744,ETG05_36762,DQ883669,DQ855004,DQ875386,ETG09_48764,DQ883689,DQ516754,DQ854993,EF011072,DQ883651,ETG07_105829,ERCC-00144_60,DQ516777,ETG02_36680,ETG10_236652,ETG10_234183,DCP_20_9,DCP_22_0,DCP_22_9,DCP_22_6,DCP_1_0,DCP_20_1,DCP_22_4,DCP_20_7,DCP_20_0,DCP_20_3,DCP_1_4,DCP_1_11,DCP_22_7,DCP_1_2,DCP_22_2,DCP_20_5,DCP_1_1,DCP_1_7
+There are 2753 genes in the matrix for which there is metadata. These will be used.
+Plotting gene quality control plots...
+ - Output/Gene_Plots/ALOHA_Mari.quantilesNorm.medianpolishGene_QCplot.png
+Saving gene ExpressionSets in Output/Gene_Results/geneEsetList.RData
+#### Probe-to-gene conversion finished: Fri Nov 13 18:32:03 2020 ####
+#### Starting PipelineStage5.DetectGenes(): Fri Nov 13 18:32:03 2020 ####
+Reading in the config file and loading ExpressionSets
+Loading gene expression sets.
+WARNING: Found no negative control genes in ALOHA_Mari.quantilesNorm.medianpolishGene.  If the array has no negative controls then this is fine. If it does have negative controls, then maybe you are running stage 5 asecond time.  Negative control genes are deleted from esets at the end of stage 5 so that they do not influence stage 6, differential expression. See the excludeGenesString configuration parameter.  I will continue, but I will use the bottom intensity genes to set the detection thresholds for each sample.
+Detecting expressed genes for each sample in ALOHA_Mari.quantilesNorm.medianpolishGene
+The mean non-log2 background gene intensity, based on 16 observed negative genes, is 3.202403 plus-minus 2.161941
+<b> ALOHA_Mari.quantilesNorm.medianpolishGene </b><br> Across the samples there are 36226 gene observations, from 2445 distinct genes, with z-scores above 5 s.d.
+Removing genes that we do not want to detect or later check for differential expression: ERCC; Negative control; Positive control<br>If this includes Negative genes, then you cannot run this stage of the pipeline again.
+Removing genes ERCC,Negative control,Positive control
+  -- ALOHA_Mari.quantilesNorm.medianpolishGene went from 2753 x 16 to 2753 x 16
+Saving Output/Gene_Results/geneEsetList.RData since just removed genes.
+Nonmetric multidimensional scaling plots of sample transcription profiles of detected genes
+Saving Output/Gene_Results/detectedGenesByEset.RData which has the names and z-scores of genes that had a signal to noise ratio greater than 5 for every sample in each of the ExpressionSets.
+#### Gene detection stage finished: Fri Nov 13 18:32:03 2020 ####
+
+
+Comparing genes detected by pipeline to the ERCC.
+[1] TRUE
+[1] TRUE
+
+Will now use the ERCC analysis to filter the 2753 genes detected by the pipeline.
+ Will keep genes that were detected by the pipeline and that also satisfy one or both of the following
+ two tests in at least 4 samples:
+   1. The gene's observed level was above the observed level for the least concentrated ERCC.,
+      Mari estimated 43 transcripts before amplification for this ERCC.
+   2. The gene's predicted intensity is > the predicted intensity for the least concentrated ERCC.
+The following table shows how many genes will pass the tests.  SampsAbove43mRNA counts the number
+ of genes that pass test #2 in n=0,1,..16 samples. SampsAboveLowestERCC counts the genes that pass
+ test #1.
+                    SampsAbove43mRNA
+SampsAboveLowestERCC    0    1    2    3    4    5    6    7    8    9   10   11   12   13   14   15   16
+                  0   439    3    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+                  1   178   24    6    1    2    0    0    0    0    0    0    0    0    0    0    0    0
+                  2    43   31   19    5    4    1    0    0    0    0    0    0    0    0    0    0    0
+                  3    10   15   26   13   10    4    4    1    0    0    0    0    0    0    0    0    0
+                  4     2    3    7    8   15   10    8    5    3    3    0    0    1    0    0    0    0
+                  5     0    1    1    4    7    6   15    9    5    1    7    3    1    5    0    0    0
+                  6     0    0    0    0    2    4   10    8    4    4    8    8   10    7    2    1    0
+                  7     0    0    0    0    0    0    1    0    4    4    6    7   10    4    9    4    2
+                  8     0    0    0    0    0    0    0    1    2    0    3    2   13    4    6    5   11
+                  9     0    0    0    0    0    0    0    0    0    1    0    4    4    4    7   14   17
+                  10    0    0    0    0    0    0    0    0    0    0    1    2    2    8    7    8   17
+                  11    0    0    0    0    0    0    0    0    0    0    0    0    1    5    6   16   24
+                  12    0    0    0    0    0    0    0    0    0    0    0    0    2    3    5   18   27
+                  13    0    0    0    0    0    0    0    0    0    0    0    0    0    4    3   10   43
+                  14    0    0    0    0    0    0    0    0    0    0    0    0    0    1    2    1   72
+                  15    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    7  119
+                  16    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1    0 1151
+After filtering there are 1939 genes detected.
+
+
+Replacing geneEsetList.RData so that it has the filtered genes. (Will save a "beforeErccFilter" version.
+[1] TRUE
+#### Starting PipelineStage6.DifferentialExpression(): Fri Nov 13 18:32:34 2020 ####
+This stage done by <code>PipelineStage6.DifferentialExpression()</code> on ALOHA_Mari.quantilesNorm.medianpolishGene with a logFC cut-off of 0.26 and an adjusted P-value cut off of 0.05
+Reading in the config file and loading ExpressionSets
+Loading gene expression sets.
+Loading detected gene lists.
+Trimming esetALOHA_Mari.quantilesNorm.medianpolishGene to include just detected genes...
+Trimming reduced ALOHA_Mari.quantilesNorm.medianpolishGene from 1939 to 1939 genes.
+Making gene linear models for ALOHA_Mari.quantilesNorm.medianpolishGene
+This is the design matrix:
+   afternoon midnight morning night noon sunrise sunset
+1          0        0       1     0    0       0      0
+2          0        0       0     0    1       0      0
+3          0        0       0     0    1       0      0
+4          1        0       0     0    0       0      0
+5          1        0       0     0    0       0      0
+6          0        0       0     0    0       0      1
+7          0        0       0     0    0       0      1
+8          0        0       0     1    0       0      0
+9          0        1       0     0    0       0      0
+10         0        0       0     1    0       0      0
+11         0        0       0     1    0       0      0
+12         0        0       0     0    0       1      0
+13         0        0       0     0    0       1      0
+14         0        0       1     0    0       0      0
+15         0        0       0     0    1       0      0
+16         0        0       0     0    1       0      0
+attr(,"assign")
+[1] 1 1 1 1 1 1 1
+attr(,"contrasts")
+attr(,"contrasts")$fac
+[1] "contr.treatment"
+
+This is the contrast matrix:
+           Contrasts
+Levels      sunset-morning noon-morning afternoon-morning sunrise-morning
+  afternoon              0            0                 1               0
+  midnight               0            0                 0               0
+  morning               -1           -1                -1              -1
+  night                  0            0                 0               0
+  noon                   0            1                 0               0
+  sunrise                0            0                 0               1
+  sunset                 1            0                 0               0
+Determining array quality weights...
+lmFit:  Making least-squares linear models for genes...
+contrasts.fit:  Estimating coefficients and errors based on the models...
+eBayes:  Looking for differentially expressed genes...
+Detecting organisms in each sample.  An organism will be considered present if at least 5 of its genes were detected (in stage 5), or if all of its genes were detected (for organisms with few genes represented on the array).
+Making the main heatmap Output/Gene_Plots/heatmap.ALOHA_Mari.quantilesNorm.medianpolishGene.logFC0.26_pv0.05.png
+Bootstrap 1 
+Bootstrap 2 
+Bootstrap 3 
+Bootstrap 4 
+Bootstrap 5 
+Bootstrap 6 
+Bootstrap 7 
+Bootstrap 8 
+Bootstrap 9 
+Bootstrap 10 
+Bootstrap 11 
+Bootstrap 12 
+Bootstrap 13 
+Bootstrap 14 
+Bootstrap 15 
+Bootstrap 16 
+Bootstrap 17 
+Bootstrap 18 
+Bootstrap 19 
+Bootstrap 20 
+Bootstrap 21 
+Bootstrap 22 
+Bootstrap 23 
+Bootstrap 24 
+Bootstrap 25 
+Bootstrap 26 
+Bootstrap 27 
+Bootstrap 28 
+Bootstrap 29 
+Bootstrap 30 
+Bootstrap 31 
+Bootstrap 32 
+Bootstrap 33 
+Bootstrap 34 
+Bootstrap 35 
+Bootstrap 36 
+Bootstrap 37 
+Bootstrap 38 
+Bootstrap 39 
+Bootstrap 40 
+Bootstrap 41 
+Bootstrap 42 
+Bootstrap 43 
+Bootstrap 44 
+Bootstrap 45 
+Bootstrap 46 
+Bootstrap 47 
+Bootstrap 48 
+Bootstrap 49 
+Bootstrap 50 
+Bootstrap 51 
+Bootstrap 52 
+Bootstrap 53 
+Bootstrap 54 
+Bootstrap 55 
+Bootstrap 56 
+Bootstrap 57 
+Bootstrap 58 
+Bootstrap 59 
+Bootstrap 60 
+Bootstrap 61 
+Bootstrap 62 
+Bootstrap 63 
+Bootstrap 64 
+Bootstrap 65 
+Bootstrap 66 
+Bootstrap 67 
+Bootstrap 68 
+Bootstrap 69 
+Bootstrap 70 
+Bootstrap 71 
+Bootstrap 72 
+Bootstrap 73 
+Bootstrap 74 
+Bootstrap 75 
+Bootstrap 76 
+Bootstrap 77 
+Bootstrap 78 
+Bootstrap 79 
+Bootstrap 80 
+Bootstrap 81 
+Bootstrap 82 
+Bootstrap 83 
+Bootstrap 84 
+Bootstrap 85 
+Bootstrap 86 
+Bootstrap 87 
+Bootstrap 88 
+Bootstrap 89 
+Bootstrap 90 
+Bootstrap 91 
+Bootstrap 92 
+Bootstrap 93 
+Bootstrap 94 
+Bootstrap 95 
+Bootstrap 96 
+Bootstrap 97 
+Bootstrap 98 
+Bootstrap 99 
+Bootstrap 100 
+Counting DE genes shared by different types of sample comparisons.  Also will draw a Venn diagram to show this.
+Zooming in on the gene clusters in the heatmap...
+The range of log fold changes found by FindZlimForGeneOrganismMaps() is (-4.45290777526097, 4.98178270772712). I will use the symmetric range (-4.981783, 4.981783).
+Showing zoom in heatmap and gene-organism maps for cluster 1
+Showing zoom in heatmap and gene-organism maps for cluster1 There are 55 to show.
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+No DE genes in cluster 1 for comparison afternoon-morning
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+Showing zoom in heatmap and gene-organism maps for cluster 3
+Showing zoom in heatmap and gene-organism maps for cluster3 There are 5 to show.
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+No DE genes in cluster 3 for comparison noon-morning
+No DE genes in cluster 3 for comparison afternoon-morning
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+Showing zoom in heatmap and gene-organism maps for cluster 2
+Showing zoom in heatmap and gene-organism maps for cluster2 There are 44 to show.
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+No DE genes in cluster 2 for comparison noon-morning
+No DE genes in cluster 2 for comparison afternoon-morning
+toptable() is deprecated and will be removed in the future version of limma. Please use topTable() instead.
+Zooming in on specific organisms in the heatmap...
+Making volcano plots...
+Nonmetric multidimensional scaling plots of sample transcription profiles
+Saved heatmap info and DE genes in Output/Gene_Results/heatmapInfoAndDEgenes.ALOHA_Mari.quantilesNorm.medianpolishGene.logFC0.26_pv0.05.RData
+#### Differentially expression stage finished: Fri Nov 13 18:32:39 2020 ####
+Warning message:
+In TrimEsetToDetectedGenes(eset, detGenes) :
+  TrimEsetToDetectedGenes found some detected genes that are not in the eset.
+
+Done with with the usual pipeline stages!
+
+
+Looking for periodic genes (Fourier analysis) using findCyclicGenes.R. The output will be in CyclicAnalysis, including a separate log file.
+[1] TRUE
+[1] TRUE
+
+
+Will not do an additional Fourier analysis of ALOHA but will use only the genes and timepoints (mainly) from mBio 2019.  This helps us understand why much more diel genes are detected at SIO than at ALOHA (after controlling for differences in the number of detected genes and timepoints used in the Fourier analysis). The output is in CyclicAnalysis.mbio2019ified, including a separate log file.
+[1] TRUE
+[1] TRUE
+Saving table of detected genes with cyclic status and annotation to detectedGenes.csv
+Includes the mean (over replicates) log2 transcript levels.
+
+
+Totally DONE!  For safekeeping, you should create a directory and move all results to it:
+    -- MicroTOOLs pipeline output:  report.html and Output directory
+    -- DetectionAnalysis directory from the additional ERCC based gene detection
+    -- CyclicAnalysis from the Fourier analysis
+    -- CyclicAnalysis.mbio2019ified from the Fourier analysis restricted to mBio 2019
+       genes and timepoints
+
+
+Goodbye at  Fri Nov 13 19:20:24 2020 
