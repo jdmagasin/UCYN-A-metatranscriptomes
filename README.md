@@ -21,3 +21,5 @@ The Scripps Pier metatranscriptomes were previously reported by [Muñoz-Marín e
 * Metadata/:  Includes the main configuration file that was used to run runMicroTOOLsPipeline.R and two other files that describe the Stn. ALOHA data. Note that the Stn. ALOHA data reside at the [NCBI Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) under accession GSE206403.
 
 * Data/workspace.Rdata:  R image that has the Stn. ALOHA and Scripps Pier ExpressionSets and other key objects used during the analysis.
+
+* Logs/:  Includes the log files from runMicroTOOLsPipeline.R and findCyclicGenes.R that are associated with the final data analyzed for the publication.
