@@ -18,7 +18,7 @@ The Scripps Pier metatranscriptomes were previously reported by [Muñoz-Marín e
     - findCyclicGenes.R:  This is run by the previous script to identify genes with significant 24 h periodic expression ("diel genes").
     - statistical_tests.R:  Interactive script that does statistical tests that appear in our publication.  Relies on Data/workspace.Rdata.
     
-* Metadata/:  Includes the main configuration file that was used to run runMicroTOOLsPipeline.R and two other files that describe the Stn. ALOHA data. Note that the Stn. ALOHA data reside at the [NCBI Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) under accession GSE206403.
+* Metadata/:  Includes the main configuration file that was used to run runMicroTOOLsPipeline.R and two other files that describe the Stn. ALOHA data. Note that the Stn. ALOHA data reside at the [NCBI Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/) under accession [GSE206403](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE206403).
 
 * Data/workspace.Rdata:  R image that has the Stn. ALOHA and Scripps Pier ExpressionSets and other key objects used during the analysis.
 
