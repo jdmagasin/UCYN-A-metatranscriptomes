@@ -2,10 +2,10 @@
 
 Key scripts and data files for
 **Open ocean and coastal strains of the N<sub>2</sub>-fixing cyanobacterium UCYN-A have distinct transcriptomes**
-by María del Carmen Muñoz-Marín, Jonathan D. Magasin, and Jonathan P. Zehr
-in pre-publication at _PLOS ONE_.
+by María del Carmen Muñoz-Marín, Jonathan D. Magasin, and Jonathan P. Zehr. This paper was published in
+[_PLOS ONE_](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0272674) on May 2, 2023.
 
-Biologically usable forms of nitrogen are scarce over much of the world ocean. Thus, marine microbes that can fix atmospheric N<sub>2</sub> gas into usable ammonia (NH<sub>3</sub>) are critical to marine food webs. One such microbe, the N<sub>2</sub>-fixing, the endosymbiotic cyanobacterium _Candidatus_ Atelocyanobacterium thalassa ("UCYN-A"), can contribute substantial amounts of fixed nitrogen to marine microbial communities.  UCYN-A genomes are highly strealined and lack the full complement of genes required for obtaining carbon through photosynthesis.  Instead UCYN-A obtains carbon from its haptophyte (photosynthetic) host in exchange for fixed nitrogen.
+Biologically usable forms of nitrogen are scarce over much of the world ocean. Thus, marine microbes that can fix atmospheric N<sub>2</sub> gas into usable ammonia (NH<sub>3</sub>) are critical to marine food webs. One such microbe, the N<sub>2</sub>-fixing, the endosymbiotic cyanobacterium _Candidatus_ Atelocyanobacterium thalassa ("UCYN-A"), can contribute substantial amounts of fixed nitrogen to marine microbial communities.  UCYN-A genomes are highly streamlined and lack the full complement of genes required for obtaining carbon through photosynthesis.  Instead UCYN-A obtains carbon from its haptophyte (photosynthetic) host in exchange for fixed nitrogen.
 
 Our study compared metatranscriptomes from natural populations of UCYN-A that were collected from two very different habitats, the nutrient-poor North Pacific Subtropical Gyre (at Stn. ALOHA) and the nutrient-rich waters off the California coast (at Scripps Pier).  For our study, metatranscritomes were obtained for samples collected over ~2-days with 3 to 6 hours between samples in order to study day-night gene expression patterns.  Differences in expression patterns across habitats can improve our understanding of UCYN-A ecotypes and their hosts, which differ among sublineages.
 
