@@ -197,11 +197,11 @@ GetCrossSitePeaksAndTroughs <- function(strain)
 a1 <- GetCrossSitePeaksAndTroughs('UCYNA1')
 a2 <- GetCrossSitePeaksAndTroughs('UCYNA2')
 
-round(100 * sum(a1$peak.aloha != a1$peak.sio)  / nrow(a1), 1)   # 85.9% of a1 genes changed peaks
-round(100 * sum(a1$peak.aloha == a1$peak.sio)  / nrow(a1), 1)   # 14.1% of a1 genes did not change peaks
+round(100 * sum(a1$peak.aloha != a1$peak.sio)  / nrow(a1), 1)   # 85.9% of A1 genes changed peaks
+round(100 * sum(a1$peak.aloha == a1$peak.sio)  / nrow(a1), 1)   # 14.1% of A1 genes did not change peaks
 
-round(100 * sum(a2$peak.aloha != a2$peak.sio)  / nrow(a2), 1)   # 82.1% of a1 genes changed peaks
-round(100 * sum(a2$peak.aloha == a2$peak.sio)  / nrow(a2), 1)   # 17.9% of a1 genes did not change peaks
+round(100 * sum(a2$peak.aloha != a2$peak.sio)  / nrow(a2), 1)   # 82.1% of A2 genes changed peaks
+round(100 * sum(a2$peak.aloha == a2$peak.sio)  / nrow(a2), 1)   # 17.9% of A2 genes did not change peaks
 
 ## Tables can be used to see which kinds of peak changes occurred (and
 ## non-changes are on the diagonal).
